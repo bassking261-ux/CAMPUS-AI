@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus AI</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                ✨
+                <div>
+                    <h2>Campus AI</h2>
+                    <p>Student Portal</p>
+                </div>
+            </div>
+
+            <nav>
+                <button class="nav-item active" onclick="showPage('dashboard')">
+                    🏠 Dashboard
+                </button>
+
+                <button class="nav-item" onclick="showPage('assistant')">
+                    🤖 AI Assistant
+                </button>
+
+                <button class="nav-item" onclick="showPage('notes')">
+                    📚 Notes & Quiz
+                </button>
+
+                <button class="nav-item" onclick="showPage('calendar')">
+                    📅 Calendar
+                </button>
+
+                <button class="nav-item" onclick="showPage('reminders')">
+                    🔔 Reminders
+                </button>
+
+                <button class="nav-item" onclick="showPage('inbox')">
+                    📩 Inbox
+                </button>
+            </nav>
+
+            <div class="bottom-menu">
+                <button>⚙️ Settings</button>
+                <button onclick="logout()">🚪 Logout</button>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+                    <p class="college">ALPHA ARTS & SCIENCE COLLEGE</p>
+
+                    <h1>
+                        Good afternoon, Student 👋
+                    </h1>
+
+                    <p class="subtitle">
+                        Your campus, studies and AI assistance — all in one place.
+                    </p>
+                </div>
+
+                <div class="profile">
+                    <div class="avatar">S</div>
+
+                    <div>
+                        <strong>Student</strong>
+                        <small>Student ID: A001</small>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- Dashboard -->
+
+            <section id="dashboard" class="page active-page">
+
+                <div class="hero">
+
+                    <div>
+
+                        <span class="badge">
+                            ✨ CAMPUS AI
+                        </span>
+
+                        <h2>
+                            Your smart campus companion.
+                        </h2>
+
+                        <p>
+                            Ask, learn, organize and stay updated
+                            with your college in one simple dashboard.
+                        </p>
+
+                        <button
+                            class="primary-btn"
+                            onclick="showPage('assistant')">
+
+                            🤖 Get AI Help →
+                        </button>
+
+                    </div>
+
+                    <div class="hero-icon">
+                        ✨
+                    </div>
+
+                </div>
+
+
+                <div class="section-title">
+                    <h2>Quick Access</h2>
+                    <p>Everything you need for your day.</p>
+                </div>
+
+
+                <div class="cards">
+
+                    <div class="card" onclick="showPage('assistant')">
+
+                        <div class="card-icon blue">
+                            🤖
+                        </div>
+
+                        <h3>AI Assistant</h3>
+
+                        <p>
+                            Ask questions and get instant academic help.
+                        </p>
+
+                        <span>→</span>
+
+                    </div>
+
+
+                    <div class="card" onclick="showPage('notes')">
+
+                        <div class="card-icon purple">
+                            📚
+                        </div>
+
+                        <h3>Study & Notes</h3>
+
+                        <p>
+                            Organize your study materials in one place.
+                        </p>
+
+                        <span>→</span>
+
+                    </div>
+
+
+                    <div class="card" onclick="showPage('notes')">
+
+                        <div class="card-icon green">
+                            📝
+                        </div>
+
+                        <h3>Quiz Creator</h3>
+
+                        <p>
+                            Practice with quick subject-based quizzes.
+                        </p>
+
+                        <span>→</span>
+
+                    </div>
+
+
+                    <div class="card" onclick="showPage('calendar')">
+
+                        <div class="card-icon orange">
+                            📅
+                        </div>
+
+                        <h3>College Calendar</h3>
+
+                        <p>
+                            Keep track of exams and campus events.
+                        </p>
+
+                        <span>→</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="bottom-cards">
+
+                    <div class="panel">
+
+                        <h2>Upcoming</h2>
+
+                        <p>Your next important activities.</p>
+
+                        <div class="event">
+
+                            <div class="date">
+                                <strong>12</strong>
+                                <small>SEP</small>
+                            </div>
+
+                            <div>
+                                <b>Python Internal Assessment</b>
+                                <small>10:30 AM · Lab 2</small>
+                            </div>
+
+                        </div>
+
+                        <div class="event">
+
+                            <div class="date">
+                                <strong>18</strong>
+                                <small>SEP</small>
+                            </div>
+
+                            <div>
+                                <b>College Seminar</b>
+                                <small>2:00 PM · Auditorium</small>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel">
+
+                        <h2>AI Suggestion ✨</h2>
+
+                        <p>
+                            Start with a focused study session.
+                        </p>
+
+                        <div class="suggestion">
+
+                            ✨
+
+                            <div>
+
+                                <b>
+                                    Try a 20-minute Python revision
+                                </b>
+
+                                <small>
+                                    Ask Campus AI to explain a topic
+                                    or create a practice quiz.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Other Pages -->
+
+            <section id="assistant" class="page">
+
+                <h2>🤖 AI Assistant</h2>
+
+                <p>
+                    Your AI study assistant will be connected here.
+                </p>
+
+                <div class="coming">
+                    AI Chat Module — Coming in Step 3
+                </div>
+
+            </section>
+
+
+            <section id="notes" class="page">
+
+                <h2>📚 Notes & Quiz</h2>
+
+                <div class="coming">
+                    Notes and Quiz module will be added next.
+                </div>
+
+            </section>
+
+
+            <section id="calendar" class="page">
+
+                <h2>📅 College Calendar</h2>
+
+                <div class="coming">
+                    College events and examination calendar.
+                </div>
+
+            </section>
+
+
+            <section id="reminders" class="page">
+
+                <h2>🔔 Reminders</h2>
+
+                <div class="coming">
+                    Your reminders will appear here.
+                </div>
+
+            </section>
+
+
+            <section id="inbox" class="page">
+
+                <h2>📩 Student Inbox</h2>
+
+                <div class="coming">
+                    Student messages and requests will appear here.
+                </div>
+
+            </section>
+
+
+            <footer>
+                Campus AI · Alpha Arts & Science College
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
