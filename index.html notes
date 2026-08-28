@@ -1,0 +1,53 @@
+<section id="notes" class="page">
+
+    <div class="assistant-header">
+        <div>
+            <p class="college">CAMPUS AI</p>
+            <h2>📝 Notes Generator</h2>
+            <p class="subtitle">
+                Generate simple study notes for any topic.
+            </p>
+        </div>
+    </div>
+
+    <div class="notes-generator">
+
+        <label>Subject</label>
+
+        <input
+            type="text"
+            id="noteSubject"
+            placeholder="Example: Python"
+        >
+
+        <label>Topic</label>
+
+        <input
+            type="text"
+            id="noteTopic"
+            placeholder="Example: Variables"
+        >
+
+        <button
+            class="generate-btn"
+            onclick="generateNotes()">
+
+            ✨ Generate Notes
+        </button>
+
+    </div>
+
+
+    <div
+        id="generatedNotes"
+        class="generated-notes">
+
+        <h3>📚 Your generated notes will appear here</h3>
+
+        <p>
+            Enter a subject and topic above to get started.
+        </p>
+
+    </div>
+
+</section>
