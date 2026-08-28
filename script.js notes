@@ -1,0 +1,57 @@
+function generateNotes() {
+
+    const subject =
+        document.getElementById("noteSubject").value.trim();
+
+    const topic =
+        document.getElementById("noteTopic").value.trim();
+
+    const output =
+        document.getElementById("generatedNotes");
+
+
+    if (subject === "" || topic === "") {
+
+        output.innerHTML = `
+            <h3>⚠️ Please enter details</h3>
+            <p>Enter both subject and topic.</p>
+        `;
+
+        return;
+    }
+
+
+    output.innerHTML = `
+
+        <h2>📚 ${topic}</h2>
+
+        <p>
+            <strong>Subject:</strong> ${subject}
+        </p>
+
+        <h3>Introduction</h3>
+
+        <p>
+            ${topic} is an important concept in ${subject}.
+            It helps students understand the basic principles
+            and practical applications of this topic.
+        </p>
+
+        <h3>Key Points</h3>
+
+        <ul>
+            <li>Understand the basic definition.</li>
+            <li>Learn the important concepts.</li>
+            <li>Practice with simple examples.</li>
+            <li>Review the topic regularly.</li>
+        </ul>
+
+        <h3>Quick Revision</h3>
+
+        <p>
+            Revise the definition, key concepts and examples
+            before your examination.
+        </p>
+
+    `;
+}
