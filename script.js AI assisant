@@ -1,0 +1,114 @@
+function sendMessage() {
+
+    const input = document.getElementById("userMessage");
+    const message = input.value.trim();
+
+    if (message === "") {
+        return;
+    }
+
+    addUserMessage(message);
+
+    input.value = "";
+
+    // Temporary AI response
+    setTimeout(function () {
+
+        addAIMessage(
+            "I received your question! 🤖 " +
+            "The real AI engine will be connected in the backend next."
+        );
+
+    }, 700);
+}
+
+
+function addUserMessage(message) {
+
+    const chat = document.getElementById("chatMessages");
+
+    const messageDiv = document.createElement("div");
+
+    messageDiv.className = "user-message";
+
+    messageDiv.innerHTML = `
+        <div class="message-content">
+            <p>${escapeHTML(message)}</p>
+        </div>
+    `;
+
+    chat.appendChild(messageDiv);
+
+    chat.scrollTop = chat.scrollHeight;
+}
+
+
+function addAIMessage(message) {
+
+    const chat = document.getElementById("chatMessages");
+
+    const messageDiv = document.createElement("div");
+
+    messageDiv.className = "ai-message";
+
+    messageDiv.innerHTML = `
+        <div class="message-icon">🤖</div>
+
+        <div>
+            <strong>Campus AI</strong>
+            <p>${escapeHTML(message)}</p>
+        </div>
+    `;
+
+    chat.appendChild(messageDiv);
+
+    chat.scrollTop = chat.scrollHeight;
+}
+
+
+function askSuggestion(question) {
+
+    document.getElementById("userMessage").value = question;
+
+    sendMessage();
+}
+
+
+function handleEnter(event) {
+
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+
+}
+
+
+function clearChat() {
+
+    const chat = document.getElementById("chatMessages");
+
+    chat.innerHTML = `
+        <div class="ai-message">
+            <div class="message-icon">🤖</div>
+
+            <div>
+                <strong>Campus AI</strong>
+
+                <p>
+                    Hi! 👋 I'm your Campus AI Assistant.
+                    Ask me anything about your studies.
+                </p>
+            </div>
+        </div>
+    `;
+}
+
+
+function escapeHTML(text) {
+
+    const div = document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
+}
