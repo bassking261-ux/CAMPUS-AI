@@ -1,0 +1,46 @@
+.notes-generator {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #e3eaf1;
+    margin-top: 20px;
+}
+
+.notes-generator label {
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 15px 0 7px;
+}
+
+.notes-generator input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #dce5ed;
+    border-radius: 10px;
+    outline: none;
+}
+
+.generate-btn {
+    margin-top: 20px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #092342;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.generated-notes {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #e3eaf1;
+    margin-top: 15px;
+    line-height: 1.7;
+}
+
+.generated-notes h3 {
+    margin-top: 0;
+}
