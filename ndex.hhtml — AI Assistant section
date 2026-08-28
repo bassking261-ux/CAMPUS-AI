@@ -1,0 +1,70 @@
+<section id="assistant" class="page">
+
+    <div class="assistant-header">
+        <div>
+            <p class="college">CAMPUS AI</p>
+            <h2>🤖 AI Assistant</h2>
+            <p class="subtitle">
+                Ask questions and get help with your studies.
+            </p>
+        </div>
+
+        <button class="clear-btn" onclick="clearChat()">
+            Clear Chat
+        </button>
+    </div>
+
+    <div class="chat-box">
+
+        <div id="chatMessages" class="chat-messages">
+
+            <div class="ai-message">
+                <div class="message-icon">🤖</div>
+
+                <div>
+                    <strong>Campus AI</strong>
+                    <p>
+                        Hi! 👋 I'm your Campus AI Assistant.
+                        Ask me anything about your studies.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="suggestions">
+
+            <button onclick="askSuggestion('Explain Python variables')">
+                Explain Python variables
+            </button>
+
+            <button onclick="askSuggestion('Create a quiz about Python')">
+                Create a Python quiz
+            </button>
+
+            <button onclick="askSuggestion('Help me prepare for an exam')">
+                Exam preparation
+            </button>
+
+        </div>
+
+
+        <div class="chat-input-area">
+
+            <input
+                type="text"
+                id="userMessage"
+                placeholder="Ask Campus AI..."
+                onkeydown="handleEnter(event)"
+            >
+
+            <button onclick="sendMessage()">
+                Send ➤
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
